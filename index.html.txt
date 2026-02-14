@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Михаил и партнеры | Креативное бюро</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* Настройки для плавного скролла */
+        html.lenis { height: auto; }
+        .lenis-smooth { scroll-behavior: auto !important; }
+        .lenis-smooth [data-aos] { transition-property: transform, opacity; }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #f8f8f8; 
+            color: #121212; 
+            overflow-x: hidden;
+        }
+        .serif { font-family: 'Playfair Display', serif; }
+        .hero-title { font-size: clamp(3.5rem, 12vw, 9rem); line-height: 0.85; letter-spacing: -0.04em; }
+        
+        /* Элемент декоративной линии */
+        .line-growth {
+            height: 1px;
+            background: #1a1a1a;
+            width: 0;
+            transition: width 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        .aos-animate .line-growth { width: 100%; }
+
+        /* Размытие для навигации */
+        nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 py-10 px-6 md:px-16 flex justify-between items-center bg-white/30">
+        <div class="text-xl font-black uppercase tracking-tighter">Михаил <span class="serif italic font-normal text-gray-400">&</span> П.</div>
+        <div class="flex space-x-10 text-[10px] uppercase tracking-[0.3em] font-bold">
+            <a href="#work" class="hover:opacity-40 transition">Работы</a>
+            <a href="#about" class="hover:opacity-40 transition">Бюро</a>
+            <a href="#contact" class="text-blue-600">Написать</a>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex flex-col justify-center px-6 md:px-16 pt-32">
+        <div data-aos="fade-up" data-aos-duration="1500">
+            <h1 class="serif hero-title mb-16">
+                Мы создаем <br> 
+                <span class="italic text-gray-300">смелый</span> <br> 
+                дизайн.
+            </h1>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8" data-aos="fade-up" data-aos-delay="400">
+            <p class="max-w-md text-xl text-gray-500 leading-tight">
+                Независимое бюро Михаила и партнеров. Превращаем технологические идеи в эмоциональный опыт.
+            </p>
+            <div class="text-xs uppercase tracking-widest font-bold border-b border-black pb-2">Листайте вниз</div>
+        </div>
+    </section>
+
+    <div class="px-6 md:px-16 my-20" data-aos="fade">
+        <div class="line-growth"></div>
+    </div>
+
+    <section id="work" class="py-20 px-6 md:px-16">
+        <div class="grid md:grid-cols-2 gap-x-24 gap-y-48">
+            
+            <div class="group" data-aos="fade-up">
+                <div class="aspect-[16/11] bg-gray-200 overflow-hidden mb-10">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252728f?q=80&w=2000" 
+                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[1.5s] ease-out">
+                </div>
+                <div class="flex justify-between items-end">
+                    <div>
+                        <span class="text-[10px] uppercase tracking-widest text-gray-400 block mb-2">Web Design / 2026</span>
+                        <h3 class="serif text-5xl italic">Cyber Artifact</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group md:mt-64" data-aos="fade-up" data-aos-delay="200">
+                <div class="aspect-[16/11] bg-gray-200 overflow-hidden mb-10">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2000" 
+                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[1.5s] ease-out">
+                </div>
+                <div>
+                    <span class="text-[10px] uppercase tracking-widest text-gray-400 block mb-2">Development / 2026</span>
+                    <h3 class="serif text-5xl italic">The Partners App</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="py-40 bg-[#000] text-white px-6 md:px-16 mt-40">
+        <div class="max-w-5xl" data-aos="fade-up">
+            <h2 class="serif text-6xl md:text-8xl mb-20 leading-[0.9]">
+                Эстетика <br>в каждой <br><span class="italic text-gray-700 underline decoration-1">строчке кода.</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-16 text-lg text-gray-400">
+                <p>Мы верим, что хороший дизайн — это не только то, как продукт выглядит, но и то, как он работает на кончиках пальцев пользователя.</p>
+                <p>Наш подход сочетает в себе аналитическую стратегию и безупречное визуальное воплощение.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-60 text-center px-6">
+        <div data-aos="zoom-in">
+            <p class="uppercase text-[10px] tracking-[0.5em] mb-10 font-bold">Обсудим ваш проект?</p>
+            <a href="mailto:hello@mikhail.com" class="serif text-5xl md:text-[10vw] hover:italic transition-all">
+                Сказать <span class="text-gray-300">привет</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-gray-100 px-6 md:px-16 flex flex-col md:flex-row justify-between items-center text-[9px] uppercase tracking-[0.3em] text-gray-400">
+        <div>Михаил & Партнеры © 2026</div>
+        <div class="flex space-x-12 my-6 md:my-0">
+            <a href="#" class="hover:text-black transition">Behance</a>
+            <a href="#" class="hover:text-black transition">Dribbble</a>
+            <a href="#" class="hover:text-black transition">Telegram</a>
+        </div>
+        <div class="italic serif normal-case text-xs text-black font-bold">Design is thinking made visual.</div>
+    </footer>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Плавный скролл (Lenis)
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            orientation: 'vertical',
+            gestureOrientation: 'vertical',
+            smoothWheel: true
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Анимация при скролле (AOS)
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: true
+        });
+
+        // Связка скролла и анимации
+        lenis.on('scroll', () => {
+            AOS.refresh();
+        });
+    </script>
+</body>
+</html>
